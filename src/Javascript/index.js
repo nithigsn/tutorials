@@ -24,15 +24,15 @@
 // }
 
 
-let arr=[5,8,4,2,6,9,2,2,5];
-let sortedArr=arr.sort();
-console.log(sortedArr);
+// let arr=[5,8,4,2,6,9,2,2,5];
+// let sortedArr=arr.sort();
+// console.log(sortedArr);
 
-let findBig=Math.max(...arr)
-console.log(findBig);
+// let findBig=Math.max(...arr)
+// console.log(findBig);
 
-let unique=[...new Set(arr)];
-console.log(unique);
+// let unique=[...new Set(arr)];
+// console.log(unique);
 
 
 
