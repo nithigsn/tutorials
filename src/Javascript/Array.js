@@ -84,8 +84,8 @@ console.log("spliced arr",arr);
 
 
 
-// slice will remove elements
-let slice=arr.slice(5);
+// slice will remove no of elements ex-10 removes 10 elements
+let slice=arr.slice(10);
 console.log("sliced",slice,"old",arr);
 
 
@@ -111,16 +111,27 @@ console.log("index of 100 is",findindex,"see",arr);
 let uniqueArr=[...new Set(arr)]
 console.log("removed duplicate",uniqueArr);
 
-// sort array alphabetically
+// sorts an array alphabetically dont use ..use instead tosSorted
 // will change arr
 // sortedArr=arr.sort();
 // console.log(sortedArr);
 
-
 // toSorted
-let numArr=[9,5,7,8,3,2,]
-let tosort=numArr.toSorted();
+let strArr=["orange","apple","pineapple","banana","mango","custardapple"];
+let tosort=strArr.toSorted().toReversed();  //can get descending order
 console.log("sort",tosort);
+
+
+// to make num array ascednig order
+let numArr=[3,6,7,8,9,12,233,44,5,6];
+numArr.sort(function(a,b){return a-b});
+console.log(numArr);
+
+// to descedning
+let numArray=[3,6,7,8,9,12,233,44,5,6];
+numArray.sort(function(a,b){return b-a});
+console.log(numArray);
+
 
 
 

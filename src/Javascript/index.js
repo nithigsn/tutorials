@@ -24,15 +24,38 @@
 // }
 
 
-// let arr=[5,8,4,2,6,9,2,2,5];
-// let sortedArr=arr.sort();
-// console.log(sortedArr);
 
-// let findBig=Math.max(...arr)
-// console.log(findBig);
 
-// let unique=[...new Set(arr)];
-// console.log(unique);
+// create date
+const date= new Date().toDateString();
+console.log(date);
+
+
+// nullish coalescing operator ??
+// returns first value if its not nullish else returns second
+let name = null;
+let text = "missing";
+let nullish = name ?? text;
+console.log(nullish);
+
+
+// optional chaining
+// The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+const car = {type:"Fiat", model:"500", color:"white"};
+console.log(car?.name ?? "missing");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
