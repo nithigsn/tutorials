@@ -46,6 +46,13 @@ console.log(car?.name ?? "missing");
 
 
 
+let json = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+let obj=JSON.parse(json);
+console.log(obj);
 
 
 

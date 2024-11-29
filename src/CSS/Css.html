@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+   
+</style>
+
+</head>
+<div class="flex">
+    <h3>Css Combinators</h3>
+    <ol>
+        <li>Decendant (space) <br>
+        Selects all d elements inside a parent</li>
+        <li>Child (>) <br>
+        Selects direct child only inside a parent</li>
+        <li>Next Sibling (+) <br>selects first element comes after the mentioned element</li>
+        <li>Subsequent-Sibling (~) <br>
+        selects all the element after the first child</li>
+    </ol>
+
+    <h3>Pseudo Class</h3>
+    <p>Used to define a special state of an element</p>
+    <pre>
+        selector:pseudo-class {
+            property: value;
+          }
+          Example
+
+          a:link{
+            color:red;
+          }
+          a:hover{} a:active a:visited a:hover
+
+
+    </pre>
+    <p>div p:first-child matches first element of every div</p>
+
+
+
+    <div class="flex">
+        <h3>Pseudo element</h3>
+        <p>Is used to style specific parts of the element</p>
+        <pre>
+            selector::pseudo-element {
+                property: value;
+              }
+
+
+              Example
+              p::first-line {
+                color: #ff0000;
+                font-variant: small-caps;
+              }
+              p::first-letter {
+                color: #ff0000;
+                font-size: xx-large;
+              }
+              h1::before {
+                content: url(smiley.gif);
+              }
+              h1::after {
+                content: url(smiley.gif);
+              }
+
+              ::selection {
+                color: red;
+                background: yellow;
+              }
+
+
+        </pre>
+
+    </div>
+</div>
+
+
+<body>
+
+</body>
+
+</html>
