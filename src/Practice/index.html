@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Promises and Async,Await</p>
+
+
+    <script>
+
+
+        function checkNum(num) {
+            return new Promise((resolve, reject) => {
+                if (num < 10) {
+                    resolve("num is less than 10")
+
+                }
+                else {
+                    reject("num is greater than 10")
+                }
+            })
+        }
+
+
+    checkNum()
+    .then((res)=>{
+        console.log(res);
+        
+    })
+    .catch((err)=>{
+        console.log(err);
+        
+    });
+
+
+    function checkAge() {
+        if(age>18){
+            return "not eligible"
+        }
+        else{
+            return "eligible"
+        }
+        
+    }
+
+
+
+    let value=true && true;
+    console.log(value);
+
+    
+    
+    
+
+
+
+ 
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

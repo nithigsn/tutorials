@@ -1,4 +1,9 @@
+
+:root{
+    --blue:blue
+}
+
 body{
     background-color: black;
-    color: white;
+    color: var(--blue)
 }

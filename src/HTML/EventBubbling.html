@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="parent">
+        <button id="child">Click me!</button>
+    </div>
+
+    <script>
+        // Event listener on the parent
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("Parent clicked!");
+        });
+
+        // Event listener on the child (button)
+        document.getElementById("child").addEventListener("click", function () {
+        event.stopPropagation();
+            alert("Button clicked!");
+        });
+    </script>
+
+</body>
+
+</html>

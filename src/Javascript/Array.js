@@ -62,7 +62,7 @@ arr.push("added");
 // opposite to pop and push
 
 
-//remoes first element
+//removes first element
 arr.shift();
 
 // adds first element shift right side
@@ -111,7 +111,7 @@ console.log("index of 100 is",findindex,"see",arr);
 let uniqueArr=[...new Set(arr)]
 console.log("removed duplicate",uniqueArr);
 
-// sorts an array alphabetically dont use ..use instead tosSorted
+// sorts an array alphabetically dont use ..use instead toSorted
 // will change arr
 // sortedArr=arr.sort();
 // console.log(sortedArr);
@@ -127,7 +127,7 @@ let numArr=[3,6,7,8,9,12,233,44,5,6];
 numArr.sort(function(a,b){return a-b});
 console.log(numArr);
 
-// to descedning
+// to descending
 let numArray=[3,6,7,8,9,12,233,44,5,6];
 numArray.sort(function(a,b){return b-a});
 console.log(numArray);

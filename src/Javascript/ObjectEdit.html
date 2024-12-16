@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Hello</p>
+    <script>
+
+
+
+        let arrObj = [{
+            name: "Nithish",
+            age: 22,
+            address: {
+                street: "Vedar Colony",
+                post: "Palapatti",
+                city: "Mettupalayam",
+                pincode: 641305
+            },
+
+        },
+        {
+            name: "selena",
+            age: 22,
+            address: {
+                street: " Colony",
+                post: "US",
+                city: "NY",
+                pincode: 55084
+            },
+
+        }];
+
+
+
+        let upperCase=arrObj.map((value=>({...value, name:value.name.toUpperCase()})))
+        console.log(upperCase);
+        console.log(arrObj);
+        
+
+        let arr=[1,2,3,4,5,6,9,4,5,6];
+
+        let total=arr.reduce((total,value)=>total+value);
+        console.log(total);
+
+        let reverse=arr.toReversed()
+        console.log(reverse);
+
+        let asc=arr.sort(function (a,b) { return a-b })
+
+        console.log(asc);
+        
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

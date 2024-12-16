@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        function upperLeft(n) {
+
+            for (let i = 0; i <= n; i++) {
+                let str = '*';
+                console.log(str.repeat(i));
+            }
+        }
+
+        upperLeft(4);
+
+
+        console.log('------------------------------');
+        
+
+
+
+        function lowerLeft(n) {
+            for (let i = n; i >= 1; i--) {
+
+                let str = '*';
+                console.log(str.repeat(i));
+
+            }
+
+        }
+
+        lowerLeft(4);
+
+        function upperRight(n) {
+            for (let i = 0; i <= n; i++) {
+                let str = '*';
+                let space = ' ';
+                console.log(space.repeat((n - i)) + str.repeat(i));
+            }
+        }
+
+        upperRight(4);
+
+
+        console.log('-----------------------------------');
+        
+
+
+        function lowerRight(n) {
+            for (let i = n; i >= 1; i--) {
+                let str = '*';
+                let space = ' ';
+                console.log(space.repeat((n - 1)) + str.repeat(i));
+
+            }
+
+        }
+
+        lowerRight(4)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

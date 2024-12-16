@@ -1,9 +1,14 @@
-import './App.css';
+import HotelManagement from "./HotelManagement";
+import MaterialUI from "./React/MaterialUI/MaterialUI";
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
+     <MaterialUI/>
       
+
     </div>
   );
 }
