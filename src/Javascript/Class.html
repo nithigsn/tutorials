@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>JS Classes</p>
+    <script>
+      // Use the keyword class to create a class.
+      // Always add a method named constructor()
+      // A JavaScript class is not an object.
+      // Class defines a blueprint of creating objects with shared properties and methods.
+      // type of Class is function
+      // Local state inside a class is called ClassFields
+      // super used to call methods in SuperClass (Parent) from SubClass(ChildClass)
+      // Inheritance using extends keyword Ex Class Animal is there and Class Dog extends Animal 
+      
+
+
+      // function constructor
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      Person.prototype.greet = function (params) {
+        return `Hello ${this.name}`;
+      };
+      const Nithish = new Person("Nithish", 23);
+
+      // Class
+      class Details {
+        constructor(name, age) {
+          this._name = name;
+          this.age = age;
+        }
+
+        get name() {
+          return this._name.toUpperCase();
+        }
+
+        set name(newName) {
+          return (this._name = newName);
+        }
+
+        greet() {
+          return `Hello ${this._name}`;
+        }
+      }
+
+      let Me = new Details("Nithish", 25);
+      console.log(Me.name);
+    </script>
+  </body>
+</html>
