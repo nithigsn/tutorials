@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        #todo-container {
+            background: lightgray;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="task-input" placeholder="Add Task">
+    <button onclick="addTask()">Add</button>
+
+    <div id="todo-container" class="hidden"></div>
+
+    <script>
+        let tasks = [];
+        let taskContainer = document.getElementById("todo-container");
+
+        function updateTaskContainer() {
+            taskContainer.innerHTML = ""; // Clear container first
+            
+            if (tasks.length === 0) {
+                taskContainer.classList.add("hidden"); // Hide if empty
+            } else {
+                taskContainer.classList.remove("hidden"); // Show if tasks exist
+
+                tasks.forEach((task, index) => {
+                    let p = document.createElement("p");
+                    p.textContent = task;
+                    p.style.cursor = "pointer";
+                    p.onclick = function () {
+                        removeTask(index);
+                    };
+                    taskContainer.appendChild(p);
+                });
+            }
+        }
+
+        function addTask() {
+            let taskInput = document.getElementById("task-input");
+            let taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                tasks.push(taskText);
+                taskInput.value = "";
+                updateTaskContainer();
+            }
+        }
+
+        function removeTask(index) {
+            tasks.splice(index, 1);
+            updateTaskContainer();
+        }
+
+        updateTaskContainer();
+    </script>
+
+</body>
+</html>

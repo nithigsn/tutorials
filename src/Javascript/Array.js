@@ -1,172 +1,171 @@
-let arr=[1,3,5,6,7,9,100,100];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+console.log(arr.length, "length");
 
+// Push element in the last
+arr.push(11);
 
+// Removes last element
+arr.pop();
 
-// // access first
-// let num=arr[0];
-// console.log(num);
+// adds element in the start
+arr.unshift(0);
 
-// // access last
-// let last=arr[arr.length-1];
-// console.log("last array",last);
-
-
-// // find lenght of an array
-// let length=arr.length;
-// console.log(length);
-
-
-// // loop array
-// for(let i=0;i<length;i++){
-//     console.log(arr[i]);
-// }
-
-
-// add into arr
-arr.push(10);
-arr.push(20);
-console.log(arr);
-
-
-// type of arr will be object
-// so how to check whether its an array or not
-console.log(Array.isArray(arr));
-// return true
-console.log(typeof(arr));
-// object
-console.log((arr instanceof Array));
-// return true
-
-
-
-// methods
-// make it string
-convertstr=arr.toString();
-console.log(convertstr);
-
-// join will work as toString but joins string with parameter
-join=arr.join("*");
-console.log(join);
-
-
-// pop remove element and push add element
-//pop removes last element
-arr.pop()
-
-// push add elements to the last
-arr.push("added");
-
-
-// shift and unshift
-// opposite to pop and push
-
-
-//removes first element
+// removes first  element
 arr.shift();
 
-// adds first element shift right side
-arr.unshift("hello")
-console.log("added hello in  first",arr);
+// returns element by the provided index
+console.log(arr.at(9));
 
+// returns elements index
+console.log(arr.indexOf(5));
 
-// concat array
-let negNum=[-1,-2];
-let concat=arr.concat(negNum);
-console.log("concat arr",concat);
+// returns true or false used to check whether the element is inside an array or not
+console.log(arr.includes(10));
 
+/*
+Map
+- doesn't modify original array
+- returns new array with provided functions
+*/
+// this will return true or false based on the condition
+console.log(arr.map((value) => value < 5));
 
-// splice method add element in array to a specific index
-// also remove element if second value is not 0
-// alters original array
-arr.splice(2,0,100,200);
-console.log("spliced arr",arr);
+// returns new array with provided function
+console.log(arr.map((value) => value * 2));
 
+/*
+Filter
+- doesn't modify original array
+- returns new array with provided functions
+*/
 
+console.log(arr.filter((value) => value <= 5));
 
-// slice will remove no of elements ex-10 removes 10 elements
-let slice=arr.slice(10);
-console.log("sliced",slice,"old",arr);
+// Every ->  returns true or false | based on whether  every elements passes the provided function
+console.log(arr.every((value) => value < 0));
 
+// Some ->  returns true or false | based on at least one element passes the provided function
+console.log(arr.some((value) => value > 1));
 
-// includes check elements is in the array
-// returns true or false
-let includes=arr.includes("hello");
-console.log("hello is in arr so ",includes);
+// fill - modify original array .used to replace all  or portion of an array elements with static value
+// three argument value start and end
+// if start and end is outbound not the index values does nothing
+console.log(arr.fill(1, 22, 11));
+//use full for initializing the array
+let newArr = new Array(5).fill(2);
 
+// concat adds arr
+// doesn't modify original array return new array
+console.log(arr.concat([11, 12, 16, 14]));
 
-//find finds the first element based on provided function
-// returns value
-let find=arr.find((value)=>value === 100);
-console.log("hello is in arr",find);
+// sorts sorts element based on first character
+// it converts numbers to strings 
+let numbers = [9, 80, 2, 15, 30];
+numbers.sort();
+console.log(numbers); // ["15", "2", "30", "80", "9"]
 
+let products = [
+  { name: "Phone", price: 800 },
+  { name: "Laptop", price: 1500 },
+  { name: "Tablet", price: 600 },
+];
 
-// findIndexOf will find index of d matching element by provided function
-let findindex=arr.findIndex((value)=>value === 100);
-console.log("index of 100 is",findindex,"see",arr);
+// Sort by price (ascending)
+products.sort((a, b) => a.price - b.price);
 
+console.log(products);
 
+/*
+  [
+    { name: "Tablet", price: 600 },
+    { name: "Phone", price: 800 },
+    { name: "Laptop", price: 1500 }
+  ]
+  */
 
-// will remove duplicate values
-let uniqueArr=[...new Set(arr)]
-console.log("removed duplicate",uniqueArr);
+// for sorting an array use
+// ascending order
+// modifies original array
+// console.log(arr.sort((a, b) => a - b));
 
-// sorts an array alphabetically dont use ..use instead toSorted
-// will change arr
-// sortedArr=arr.sort();
-// console.log(sortedArr);
+// descending order
+// console.log(arr.sort((a, b) => b - a));
 
-// toSorted
-let strArr=["orange","apple","pineapple","banana","mango","custardapple"];
-let tosort=strArr.toSorted().toReversed();  //can get descending order
-console.log("sort",tosort);
+// reverse | Reversed the order of an array and modifies original array return the modified array
+// let reversed = original.slice().reverse(); use slice if you don't want to modify original array
+console.log(arr.reverse(), "Reversed Array");
 
+//join | used to convert an array into a string by joining all its elements using a specified separator.
+// console.log(arr.join(" | "));
 
-// to make num array ascednig order
-let numArr=[3,6,7,8,9,12,233,44,5,6];
-numArr.sort(function(a,b){return a-b});
-console.log(numArr);
+// flat and flatMap
+// used to work with nested array
+// one level
+let nestedArr = [1, 2, [3, 4], 5];
+console.log(nestedArr.flat());
+// Output: [1, 2, 3, 4, 5]
 
-// to descending
-let numArray=[3,6,7,8,9,12,233,44,5,6];
-numArray.sort(function(a,b){return b-a});
-console.log(numArray);
+let nestedArray = [1, [2, [3, [4, 5]]]];
+console.log(nestedArray.flat(2));
+// Output: [1, 2, 3, [4, 5]]
 
+// can specify depth for flat and can't specify depth for flatMap
+console.log(nestedArray.flat(Infinity));
+// Output: [1, 2, 3, 4, 5]  (fully flattened)
 
+// flatmap flattens the array and can transform the data
+let flatMapEx = [1, 2, 3];
+let result = flatMapEx.flatMap((x) => [x, x * 2]);
 
+console.log(result);
+// Output: [1, 2, 2, 4, 3, 6]
 
-let numbers = [9, 5, 7, 8, 3, 2];
-// Find the lowest and highest numbers
-let lowestNum = Math.min.apply(null, numbers); // Use null as the first argument
-let highestNum = Math.max.apply(null, numbers); // Use null as the first argument
+// find | returns first element that meets the provided condition
 
-// Output the results
-console.log("Lowest number:", lowestNum);  // 2
-console.log("Highest number:", highestNum); // 9
+// findIndex returns the first element's index that meet the provided condition
 
+// splice - modifies original array
+// syntax
+// start – Index where modifications begin.
+// deleteCount – Number of elements to remove.
+// item1, item2, ... (optional) – Elements to insert at the start position.
+// Returns the removed elements.
+//  array.splice(start, deleteCount, item1, item2, ...)
 
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// Remove 2 elements starting from index 1
+let removed = num.splice(0, 6, 100, 101, 102);
 
+console.log("-----------------------------------------------------------");
 
+console.log(num, "num");
+console.log(removed, "removed");
 
+// slice
+// The slice() method creates a new array by extracting elements from an existing array.
+// syntax - array.slice(start, end);
+// start – Index where extraction begins.
+// end (optional) – Index before which extraction stops (not included).
+// Returns a new array without modifying the original.
 
+let n = [1, 2, 3, 4, 5];
 
+let sliced = n.slice(1, 4);
 
+// let sliced = n.slice(-2); return last two elements
 
+console.log(sliced); // [2, 3, 4] (new array)
+console.log(n); // [1, 2, 3, 4, 5] (original remains unchanged)
 
+// Array.isArray used to check whether array or not
+console.log(Array.isArray(n));
 
+// Array.from
+// ✅ Convert iterables (strings, Sets, Maps, NodeLists) into arrays.
+// ✅ Convert array-like objects (arguments, HTMLCollection) into arrays.
+// ✅ Use the map function to modify elements while creating an array.
+// ✅ Create arrays of specific lengths with custom values
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Ex -> let arr = Array.from({ length: 5 }, (_, i) => i + 1);

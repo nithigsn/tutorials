@@ -20,14 +20,20 @@
     </div>
 
     <script>
-      document.getElementById("parent").addEventListener("click", function () {
-        alert("from parent");
-      });
+      document
+        .getElementById("parent")
+        .addEventListener("click", function (event) {
+          setTimeout(() => {
+            alert("from parent");
+          }, 4000);
+        });
 
-      document.getElementById("child").addEventListener("click", function () {
-        event.stopPropagation();
-        alert("from child");
-      });
+      document
+        .getElementById("child")
+        .addEventListener("click", function (event) {
+          event.stopPropagation();
+          alert("from child");
+        });
     </script>
   </body>
 </html>

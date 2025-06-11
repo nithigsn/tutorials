@@ -1,84 +1,60 @@
-let name='Nithish Kumar';
+let myName = "Nithish";
 
-// returns letter based on index
-let letter=name.at(2);
-console.log(letter);
+// returns length of the string
+console.log(myName.length);
 
+// returns character based on the index value
+console.log(myName[2]);
 
-// 3 methods to exctract string parts
-// 1 slice based on index from to value will return
-let text='Apple,Banana,Kiwi';
-let part=text.slice(0,2);
-// if 1 parameter will return after the index of given paramter
-// if 1 will return after pple everything
-console.log(part);
+// returns character based on the index value
+console.log(myName.charAt(2));
 
-// 2 substring will give the extracted part
-let subS=text.substring(6,12)
-console.log(subS);
+// returns charcode of the character
+console.log(myName.charCodeAt(2));
+// String.fromCharCode(code) will return the string
 
-// uppercase
-uppercase=text.toUpperCase();
-console.log(uppercase);
+// returns index of the character
+console.log(myName.indexOf("N"));
 
-// lowercase
-lowercase=text.toLowerCase();
-console.log(lowercase);
+// slice return portion from start to end excluding the end supports negative index
+console.log(myName.slice(2, 5));
+console.log(myName.slice(-7));
 
 // concat
-let fname="Nithish";
-let ini="G.S";
-let lname='kumar';
-let fullname=ini.concat("",fname,lname);
-console.log(fullname);
-
-// trim removes whitespaces from both side not in the middle
-let spacedText="     hello     world    ";
-trim=spacedText.trim();
-// removed from start
-trimstart=spacedText.trimStart();
-// removed from end   
-trimEnd=spacedText.trimEnd();
-console.log(trim,trimstart,trimEnd);
-
-
-// repeat should pass number for how many times
-let norepeat="hello";
-let repeated=norepeat.repeat(3);
-console.log(repeated);
-
-
-// replaces text.... only the first match
-let msg='i love you';
-let replacetxt=msg.replace("love",'miss');
-console.log(replacetxt);
-
-// split will return as array
-let comma="a,b,c,d,e,f";
-let space='"nithish","hello","Okay"';
-let splitcomma=comma.split(',');
-let splitspace=space.split(' ');
-console.log(splitcomma,splitspace);
+console.log(myName.concat("Kumar"));
 
 
 
+// splits a string into an array based on a specified delimiter.
+// returns array
+// syntax -> string.split(separator, limit);
+console.log(myName.split("",5));
 
 
+// includes check string contains specific sub-string
+// syntax -> string.includes(searchString, startIndex); -> search substr and position to start from
 
 
+let txt = 'I Love You';
+console.log(txt.includes("Love"));
 
 
+// replace("math","replace txt") -> replace first match
+// replaceAll() -> replace every match
+console.log(txt.replaceAll("o",'1'));
 
 
+// trim() -> removes whitespace from start and end
+// trimStart() -> removes whitespace from start only
+// trimEnd -> removes whitespace from end only
+
+// padStart(length,"value")
+// let txt = "Hell0"
+// txt.padStart(10,"-") OP -> "-----Hello"
+
+// padEnd(length,"value")
+// let txt = "Hell0"
+// txt.padStart(10,"-") OP -> "Hello-----"
 
 
-
-
-
-
-
-
-
-
-
-
+// startsWith("value",index)=> if index 

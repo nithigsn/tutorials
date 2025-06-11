@@ -1,118 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-
-        function printEven(num) {
-            for (let i = 1; i <= num; i++) {
-                if (i % 2 === 0) {
-                    console.log(i, "Even Number");
-                }
-            }
-
+      /*function printEven(num) {
+        for (let i = 1; i <= num; i++) {
+          if (i % 2 === 0) {
+            console.log(i, "Even Number");
+          }
         }
+      }
 
-        printEven(10)
+      printEven(10);
 
-
-        function twelvethtable() {
-            for (let i = 1; i <= 10; i++) {
-                console.log(i * 12);
-
-            }
-
+      function twelvethtable() {
+        for (let i = 1; i <= 10; i++) {
+          console.log(i * 12);
         }
+      }
 
-        twelvethtable()
+      twelvethtable();
 
+      function calculateArr() {
+        let arr = [10, 10, 10, 10, 10, -10];
+        let sum = arr.reduce((acc, value) => acc + value, 0);
+        console.log(sum);
+      }
 
+      calculateArr();
 
-        function calculateArr() {
-            let arr = [10, 10, 10, 10, 10,-10]
-            let sum = arr.reduce((acc, value) => acc + value, 0)
-            console.log(sum);
-        }
+      function reverseArr(params) {
+        let arr = [5, 4, 3, 2, 1];
+        let reversedArr = arr.toReversed();
+        console.log(reversedArr);
+      }
 
+      reverseArr();
 
-        calculateArr()
+      function arrAscending(params) {
+        let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-
-
-
-        function reverseArr(params) {
-           let arr=[5,4,3,2,1]
-           let reversedArr=arr.toReversed();
-           console.log(reversedArr);
-            
-        }
-
-        reverseArr()
-
-       function arrAscending(params) {
-        let arr=[9,8,7,6,5,4,3,2,1];
-
-        let ascending=arr.sort(function(a,b){return a-b})
+        let ascending = arr.sort(function (a, b) {
+          return a - b;
+        });
         console.log(ascending);
-        
-        
-       }
+      }
 
-       arrAscending()
+      arrAscending();
 
+      function removeNegative(params) {
+        let arr = [-1, -2, -3, -4, -5, -6, 0, 1, 2, 3, 4, 5];
 
+        let removedNegative = arr.filter((value) => value >= 0);
+        console.log(removedNegative);
+      }
+      removeNegative();
 
-       function removeNegative(params) {
-         let arr=[-1,-2,-3,-4,-5,-6,0,1,2,3,4,5]
+      function maximumArr(params) {
+        let arr = [1, 2, 3];
 
-         let removedNegative=arr.filter((value)=> value>=0);
-         console.log(removedNegative);
-         
-
-       }
-       removeNegative()
-
-
-
-    function maximumArr(params) {
-        let arr=[1,2,3]
-
-        let findMax=Math.max(...arr);
+        let findMax = Math.max(...arr);
         console.log(findMax);
-        
-        
-    }
+      }
 
-    maximumArr();
+      maximumArr();
 
+      function addNum(a, b, ...num) {
+        return a + b;
+      }
 
+      console.log(addNum(5, 6, 7)); */
 
-    function addNum(a,b,...num) {
-        return a+b
-      
-    }
+      // function primeNum(n) {
+      //   if (n === 1) return false;
+      //   if (n === 2) return true;
+      //   for (let i = 2; i <= Math.sqrt(n); i++) {
+      //     if (n % i === 0) return false;
+      //   }
+      //   return true;
+      // }
+      // console.log(primeNum(15));
+      // console.log(Math.sqrt(15));
 
-    console.log(addNum(5,6,7));
-    
+      // function findLargestElement(nestedArray) {
+      //   let largest = nestedArray[0][0];
 
+      //   for (let arr of nestedArray) {
+      //     for (let num of arr) {
+      //       if (num > largest) {
+      //         largest = num;
+      //       }
+      //     }
+      //   }
 
+      //   return largest;
+      // }
 
-            
-        
+      // console.log(findLargestElement([[1.2, 3, 4,10],[1, 2, 3, 5, 6]]));
 
+      // function fibSer(n) {
+      //   let fib = [0, 1];
 
+      //   for (let i = 2; i <= n; i++) {
+      //     fib[i] = fib[i - 1] + fib[i - 2];
+      //   }
+      //   return console.log(fib);
+      // }
 
+      // fibSer(5);
 
+      // function sample() {
+      //   console.log("Called");
+      // }
 
+      // function deBounce() {
+      //   clearTimeout(deBounce.timer); // Clear the previous timeout
+      //   deBounce.timer = setTimeout(sample, 1000); // Start a new timeout
+      // }
+
+      // // Multiple rapid calls; sample() will execute only once after 3 sec
+      // deBounce();
+      // deBounce();
+      // deBounce();
+      // deBounce();
+      // deBounce();
+      // deBounce();
+      // deBounce();
     </script>
-
-</body>
-
+  </body>
 </html>

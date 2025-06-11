@@ -22,7 +22,7 @@ myPromise
 async function displayAge() {
     try {
         const result = await myPromise;
-        console.log('sucess', result);
+        console.log('success', result);
 
 
     } catch (error) {

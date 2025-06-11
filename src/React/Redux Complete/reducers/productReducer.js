@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchProducts } from '../slices/productSlice'; // Import the async thunk
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchProducts } from "../slices/productSlice"; // Import the async thunk
 
 const productSlice = createSlice({
-  name: 'product',
+  name: "product",
   initialState: {
     items: [],
     loading: false,
@@ -13,7 +13,7 @@ const productSlice = createSlice({
       state.items.push(action.payload);
     },
     removeProduct: (state, action) => {
-      state.items = state.items.filter(item => item.id !== action.payload);
+      state.items = state.items.filter((item) => item.id !== action.payload);
     },
   },
   extraReducers: (builder) => {

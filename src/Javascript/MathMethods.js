@@ -17,8 +17,8 @@ console.log(random);
 
 
 // to get whole number use with math round or floor
-let wholenum=Math.round(Math.random()*100)+1;
-console.log(wholenum);
+let wholeNum=Math.round(Math.random()*100)+1;
+console.log(wholeNum);
 
 
 

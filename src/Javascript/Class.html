@@ -15,43 +15,131 @@
       // type of Class is function
       // Local state inside a class is called ClassFields
       // super used to call methods in SuperClass (Parent) from SubClass(ChildClass)
-      // Inheritance using extends keyword Ex Class Animal is there and Class Dog extends Animal 
-      
+      // Inheritance using extends keyword Ex Class Animal is there and Class Dog extends Animal
+      // The body of a class is executed in strict mode even without the "use strict" directive.
+      /* A class element can be characterized by three aspects:
 
+Kind: Getter, setter, method, or field
+Location: Static or instance
+Visibility: Public or private */
 
-      // function constructor
-      function Person(name, age) {
-        this.name = name;
-        this.age = age;
-      }
+      // A constructor can use the super keyword to call the constructor of the super class.
 
-      Person.prototype.greet = function (params) {
-        return `Hello ${this.name}`;
-      };
-      const Nithish = new Person("Nithish", 23);
+      // // function constructor
+      // function Person(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      // }
 
-      // Class
-      class Details {
+      // Person.prototype.greet = function (params) {
+      //   return `Hello ${this.name}`;
+      // };
+      // const Nithish = new Person("Nithish", 23);
+
+      // // Class
+      // class Details {
+      //   constructor(name, age) {
+      //     this._name = name;
+      //     this.age = age;
+      //   }
+
+      //   get name() {
+      //     return this._name.toUpperCase();
+      //   }
+
+      //   set name(newName) {
+      //     return (this._name = newName);
+      //   }
+
+      //   greet() {
+      //     return `Hello ${this._name}`;
+      //   }
+      // }
+
+      // let Me = new Details("Nithish", 25);
+      // console.log(Me.name);
+
+      //  Class Declaration
+      // class Person {
+      //   constructor(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   }
+      // }
+
+      // Class Expression Class can have it's own name
+      // have the temporal dead zone restrictions as let and cost
+      const User = class Users {
         constructor(name, age) {
-          this._name = name;
+          this.name = name;
           this.age = age;
         }
 
+        greet() {
+          return console.log(`Welcome ${this.name}`);
+        }
+      };
+
+      class OtherDetails extends User {
+        constructor(name, wife) {
+          super(name);
+          this.wife = wife;
+        }
+        maritialStatus() {
+          super.greet();
+          console.log(`${this.name} is a hus of ${this.wife}`);
+        }
+      }
+
+      const Nithish = new OtherDetails("Xxx", "Yyyy");
+      Nithish.maritialStatus();
+
+      // A class is defined using the class keyword.
+
+      /*
+       Constructor Method
+The constructor is a special method that initializes an object when the class is instantiated.
+It is automatically called when creating a new object. */
+      class Person {
+        //Private Field
+        #balance = 0;
+        constructor(name, age) {
+          this._name = name;
+          this._age = age;
+        }
+        // Methods functions inside the classes
+        greet() {
+          return console.log(`Name is ${this.name}`);
+        }
+        deposit(amount) {
+          this.#increaseBalance(amount);
+        }
+        // Private method
+        #increaseBalance(amount) {
+          this.#balance += amount;
+          return console.log(`Balance is ${this.#balance}`);
+        }
+        // getter
         get name() {
-          return this._name.toUpperCase();
+          return this._name;
         }
 
+        //setter
         set name(newName) {
           return (this._name = newName);
         }
 
-        greet() {
-          return `Hello ${this._name}`;
+        static details() {
+          return `${this._name} " " ${this._age}`;
         }
       }
 
-      let Me = new Details("Nithish", 25);
-      console.log(Me.name);
+      class Child extends Person {
+        constructor(name, number) {
+          super(name);
+          this.number = number;
+        }
+      }
     </script>
   </body>
 </html>
