@@ -9,7 +9,7 @@ console.log(myName[2]);
 // returns character based on the index value
 console.log(myName.charAt(2));
 
-// returns charcode of the character
+// returns charCode of the character
 console.log(myName.charCodeAt(2));
 // String.fromCharCode(code) will return the string
 

@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 
 // basically to manage state but with complex
 // like you need to do more things based on single state

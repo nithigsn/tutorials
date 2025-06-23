@@ -26,7 +26,7 @@ if (number > 20) {
 
 
 // switch case
-// if theres no brack will continue printing everything
+// if theres no break will continue printing everything
 // 
 // let day = "monday";
 // switch (day) {

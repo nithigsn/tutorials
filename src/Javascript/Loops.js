@@ -61,6 +61,6 @@ console.log(x);
 }
 
 
-// for in interates over key and indices for in not for string
+// for in iterates over key and indices for in not for string
 // for of iterates over values and for of not for objects
 
